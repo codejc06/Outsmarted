@@ -6,6 +6,8 @@
 - [Game Overview](#Overview)
 - [Installation](#Installation)
 
+
+
 # Overview
 
 Outsmarted is a fast-paced, real-time 1v1 online trivia game where two players face off across three intense rounds. In each round, both players receive the same question and must decide whether to answer it themselves or attempt to steal their opponent's answer. A correct answer earns 1 point, but a successful steal yields 2 points — while a failed steal results in a penalty of –1 point. After both players make their choices, the results are revealed.
@@ -16,7 +18,8 @@ Outsmarted is a fast-paced, real-time 1v1 online trivia game where two players f
 ## Clone the Repo:
 
 git clone https://github.com/yourusername/outsmarted.git
-cd outsmarted'''
+
+cd outsmarted
 
 ## Install dependencies
 
@@ -27,4 +30,4 @@ npm install
 npm start || node server.js
 
 ## Play
-Visit http://localhost:3000 on two seperate clients and enjoy.
+Visit http://localhost:3000 on
