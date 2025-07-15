@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Outsmarted - Game Room</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="room-body">
+
+  <div class="split-screen">
+    <div class="player-side">
+      <div class="score-label">You</div>
+      <div id="player-score" class="score-value">0</div>
+      <div id="player-result" class="result-box"></div>
+    </div>
+
+    <div class="opponent-side">
+      <div class="score-label">Opponent</div>
+      <div id="opponent-score" class="score-value">0</div>
+      <div id="opponent-result" class="result-box"></div>
+    </div>
+
+    <div class="question-box" id="question-box">
+      <div id="round-info">Round <span id="round-number">1</span> / <span id="max-rounds">10</span> </div>
+      <div id="question" class="question-text">Loading question...</div>
+      <input type="text" id="answerInput" placeholder="Type your answer..." />
+      <div class="button-row">
+        <button id="answerBtn" class="action-btn blue-btn">Answer</button>
+        <button id="stealBtn" class="action-btn red-btn">Steal</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module">
+    import socket from "/socket.js";
+    import { setupGameListeners } from "/game.js";
+
+    socket.connect();
+    setupGameListeners(socket);
+  </script>
+</body>
+</html>
+
+
